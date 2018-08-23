@@ -16,27 +16,13 @@
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
 <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
-	<script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
-	<link href="https://cdn.bootcss.com/layer/3.1.0/theme/default/layer.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/layer/3.0.3/layer.js"></script>
+<link href="https://cdn.bootcss.com/layer/3.1.0/theme/default/layer.css" rel="stylesheet">
 </head>
 
 <body>
 	
-<div id="photo" class="photo">
-  <img layer-pid="图片id，可以不写" hidden="hidden"  layer-src="https://goss.veer.com/creative/vcg/veer/800water/veer-163941594.jpg"  src="https://goss.veer.com/creative/vcg/veer/800water/veer-163941594.jpg" alt="图片名">
-  <img layer-pid="图片id，可以不写" hidden="hidden"   layer-src="https://goss.veer.com/creative/vcg/veer/800water/veer-163941594.jpg" src="https://goss.veer.com/creative/vcg/veer/800water/veer-163941594.jpg" alt="图片名">
-</div>
-<script>
-	$(function(){
-	
-		layer.photos({
-  photos: '#photo'
-  ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
-}); 
-	})
-	
-	
-</script>
+
 
 <div id="mainDiv">
 	<div id="content">
@@ -85,6 +71,10 @@
 </div>
 
 <script type="text/javascript">
+
+	
+
+
 var offsetX = $("#loveHeart").width() / 2;
 var offsetY = $("#loveHeart").height() / 2 - 55;
 var together = new Date();
@@ -114,9 +104,39 @@ if (!document.createElement('canvas').getContext) {
 	}, 500);
 
 	adjustCodePosition();
-	$("#code").typewriter();
+//	$("#code").typewriter();
 }
 </script>
+<script>
+
+	$(function(){
+
+	})
+	var img ='<div ><img  src="img/bao.png" /></div >';
+	var wenwen=layer.prompt({title: '我是谁?', formType: 3}, function(text, index){
+		layer.close(index)
+		if(text=="老公"){
+			layer.open({  
+	    type: 1,  
+	    shade: false,  
+	    title: false, //不显示标题  
+	   // area:['150px','150px'],  
+	 
+	    content: img, //捕获的元素，注意：最好该指定的元素要存放在body最外层，否则可能被其它的相对元素所影响  
+	    cancel: function () {  
+	        //layer.msg('图片查看结束！', { time: 5000, icon: 6 });  
+	    }  
+	}); 
+		}
+			layer.close(index)
+		});
+
+	
+	
+
+			
+			
+		</script>
 <div style="text-align:center;clear:both">
 </div>
 </body>
