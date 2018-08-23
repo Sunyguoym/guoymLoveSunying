@@ -22,16 +22,16 @@
 
 <body>
 	
-<div id="layer-photos-demo" class="photo">
+<div id="photo" class="photo">
   <img layer-pid="图片id，可以不写" hidden="hidden"  src="https://goss.veer.com/creative/vcg/veer/800water/veer-163941594.jpg" alt="图片名">
 </div>
 <script>
 	$(function(){
 	
-		layer.open({
-  title: '在线调试'
-  ,content: '可以填写任意的layer代码'
-});  
+		layer.photos({
+  photos: '#photo'
+  ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+}); 
 	})
 	
 	
