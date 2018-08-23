@@ -15,10 +15,27 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-
+<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+	<link href="https://cdn.bootcss.com/layer/3.1.0/theme/default/layer.css" rel="stylesheet">
 </head>
 
 <body>
+	
+<div id="layer-photos-demo" class="photo">
+  <img layer-pid="图片id，可以不写" hidden="hidden"  src="https://goss.veer.com/creative/vcg/veer/800water/veer-163941594.jpg" alt="图片名">
+</div>
+<script>
+	$(function(){
+	
+	layer.photos({
+		  photos: '#photo'
+		  ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+		}); 
+	})
+	
+	
+</script>
 
 <div id="mainDiv">
 	<div id="content">
